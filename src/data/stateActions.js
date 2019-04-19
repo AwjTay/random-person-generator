@@ -1,12 +1,7 @@
-export const setPerson = ({name, surname, region, gender, age, email}) => {
+export const setPerson = (person) => {
 	return {
 		type : "setPerson",
-		name,
-		surname,
-		region,
-		gender,
-		age,
-		email,
+		person : person
 
 	}
 };

@@ -1,13 +1,17 @@
 import React from 'react';
 import GeneratorScreen from "../GeneratorScreen"
+import ResultScreen from "../ResultScreen"
 import '../../gulp/dist/general.css'
 
 const App = () => {
   
   return (
     <React.Fragment>
-      <p>Random Person Generator</p>
-      <GeneratorScreen />
+      
+        <div className="components_wrapper">
+	      <GeneratorScreen />
+	      <ResultScreen />
+        </div>
     </React.Fragment>
   )
 }

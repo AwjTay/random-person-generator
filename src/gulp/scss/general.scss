@@ -1,7 +1,7 @@
 
 #root{
 	margin: -1%;
-	padding: 1%;
+	padding: 5%;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -13,15 +13,23 @@
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
 
+.components_wrapper{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}
 
 
 
 form{
+	width: 30%;
 	background-color: rgba(255, 255, 255, 0.4);
 	padding: 1%;
 	display: flex;
 	flex-direction: column;
-	border: 5px solid brown;
+	position: relative;
+	z-index: 1;
 }
 
 .form_structure{
@@ -32,5 +40,98 @@ form{
 
 .form_structure label{
 	margin: 2%;
+}
+
+form:before{
+	position: absolute;
+	content: "";
+	z-index: -1;	
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: none;
+	border: 2px solid transparent;
+	border-radius: 1%;
+}
+
+form:hover:before{
+	animation: animate 1s linear forwards;
+}
+
+@keyframes animate{
+
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: #262626;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	50%{
+		width: 100%;
+		height: 0%;
+		border-top-color: #262626;
+		border-right-color: #262626;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: #262626;
+		border-right-color: #262626;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+}
+
+form:after{
+	position: absolute;
+	content: "";
+	z-index: -1;	
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: transparent;
+	border: 2px solid transparent;
+}
+
+form:hover:after{
+	animation: animate2 1s linear forwards;
+}
+
+@keyframes animate2{
+
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: #262626;
+	}
+
+	50%{
+		width: 0%;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: #262626;
+		border-left-color: #262626;
+	}
+
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: #262626;
+		border-left-color: #262626;
+	}
 }
 
