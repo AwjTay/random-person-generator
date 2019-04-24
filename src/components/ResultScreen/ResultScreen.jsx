@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Result from "../Result"
+import { personFormatter } from "../../data/formatFunctions.js"
 
 class ResultScreen extends Component{
 	constructor(props){
@@ -7,40 +7,45 @@ class ResultScreen extends Component{
 	}
 
 	render(){
-		
-		console.log(this.props.historyArray)
-		
+
 		return(
 			<React.Fragment>
-				<p>People</p>
-				<ul>
+				<div className="result_container">
 
-					{this.props.historyArray.map((person, i) => (
-						<li key={i}>
+					<ul className="person_list" style={{listStyle : "none"}}>
 
-							{
-								<table className="table">
-							        <thead>
-							            <tr>
-							                <th scope="col">#</th>
-							                <th scope="col">#</th>
-							            </tr>
-							        </thead>
-							        <tbody>
-							        { person.map(index => (
-							            <tr key={index}>
-							                <th scope="row">#</th>
-							                        <td>{ index }</td>      
-							            </tr>
-							            ))}  
-							        </tbody>
-							    </table>
-							}
+						{this.props.historyArray.map((person, i) => {
 
-						</li>))
-					}
+							const formattedPerson = personFormatter(person)
 
-				</ul>
+							return(
+							
+								<li key={i}>
+
+									{
+										<table className="table">
+									        
+									        <tbody>
+									        { formattedPerson.map((detail, i) => (
+									        	
+									            <tr key={i}>
+									                <th scope="row"></th>
+									                <td>{
+									                	detail ? detail : null
+									                	}
+									                </td>      
+									            </tr>
+									            ))}  
+									        </tbody>
+									    </table>
+									}
+
+								</li>)}
+							)
+						}
+
+					</ul>
+				</div>
 
 			</React.Fragment>
 		)
@@ -49,30 +54,4 @@ class ResultScreen extends Component{
 
 }
 
-
-
-
-
-
-/*
-const ResultScreen = historyArray => {
-	console.log(historyArray)
-	const { history } = historyArray
-	console.log(history)
-	return(
-		<React.Fragment>
-			<ul>
-
-			
-
-			</ul>
-
-		</React.Fragment>
-	)
-}
-*/
 export default ResultScreen
-
-//{historyArray ? historyArray.map((person, i) => <li key={i}>{person}</li>) : null}
-
-//{historyArray.map((i) => <li key={i}>{i}</li>)}	

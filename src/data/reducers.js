@@ -4,7 +4,7 @@ const reset = state => {
 	return initial
 }
 
-const updateOptions = (state, action) => ({...state, ageRequested : action.ageRequested, emailRequested : action.emailRequested, dobRequested : action.emailRequested})
+const updateOptions = (state, action) => ({...state, ageRequested : action.ageRequested, emailRequested : action.emailRequested, dobRequested : action.dobRequested})
 
 const updateHistory = (state, action) => ({...state, history : [...state.history, action.person]}) 
 

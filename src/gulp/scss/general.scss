@@ -17,7 +17,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 
@@ -133,5 +133,114 @@ form:hover:after{
 		border-bottom-color: #262626;
 		border-left-color: #262626;
 	}
+}
+
+.result_container{
+	width: 30%;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 1;
+}
+
+.result_container:before{
+	position: absolute;
+	content: "";
+	z-index: -1;	
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: none;
+	border: 2px solid transparent;
+	border-radius: 1%;
+}
+
+.result_container:hover:before{
+	animation: animate 1s linear forwards;
+}
+
+@keyframes animate{
+
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: #262626;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	50%{
+		width: 100%;
+		height: 0%;
+		border-top-color: #262626;
+		border-right-color: #262626;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: #262626;
+		border-right-color: #262626;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+}
+
+.result_container:after{
+	position: absolute;
+	content: "";
+	z-index: -1;	
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: transparent;
+	border: 2px solid transparent;
+}
+
+.result_container:hover:after{
+	animation: animate2 1s linear forwards;
+}
+
+@keyframes animate2{
+
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: #262626;
+	}
+
+	50%{
+		width: 0%;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: #262626;
+		border-left-color: #262626;
+	}
+
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: #262626;
+		border-left-color: #262626;
+	}
+}
+
+.person_list li{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border: 1px solid grey;
 }
 

@@ -42,10 +42,10 @@ class GeneratorScreen extends Component {
 			return null;
 		}
 	}
+	//tracing the state of the dobReq boolean
 
 	handleSubmit(e){
 		e.preventDefault()
-		console.log(this.state)
 		this.props.onSubmit(this.state)
 	}
 
