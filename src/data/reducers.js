@@ -6,7 +6,18 @@ const reset = state => {
 
 const updateOptions = (state, action) => ({...state, ageRequested : action.ageRequested, emailRequested : action.emailRequested, dobRequested : action.dobRequested})
 
-const updateHistory = (state, action) => ({...state, history : [...state.history, action.person]}) 
+const updateHistory = (state, action) => {
+	if(state.history.length < 4){
+		return (
+			{...state, history : [...state.history, action.person]}
+		) 
+	}
+	else {
+		return (
+			{...state, history : initial.history}
+		)
+	}
+}
 
 const updatePerson = (state, action) => ({...state, response : action})
 

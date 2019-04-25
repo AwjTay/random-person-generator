@@ -53,9 +53,10 @@ class GeneratorScreen extends Component {
 		return(
 			<React.Fragment>
 				<form>
+					<h3 className="component_header">Make</h3>
 					<div className="form_structure">
 						<label htmlFor="nationality" >Select Nationality</label>
-						<select id="nationality" onChange={ this.handleNationalityChange }>
+						<select className="form_select" id="nationality" onChange={ this.handleNationalityChange }>
 							{ countries.map((item, i) => (
 			            		<option value={ item.name } key={i}>{ item.name }</option>
 				          	))}
@@ -63,23 +64,29 @@ class GeneratorScreen extends Component {
 					</div>
 					<div className="form_structure">
 						<label htmlFor="nationality">Select Gender</label>
-						<select id="gender" onChange={ this.handleGenderChange }>	
+						<select className="form_select" id="gender" onChange={ this.handleGenderChange }>	
 							<option value="random">Random</option>				
 			            	<option value="female">Female</option>
 			            	<option value="male">Male</option>
 						</select>
 					</div>
-					<label htmlFor="additional_info">Optional Infomation</label>
-					<div id="additional_info" className="form_structure">	
-						<label htmlFor="age">Age</label>
-						<input onChange={this.handleOptionsChange} type="checkbox" id="age"  />
-						<label htmlFor="email">Email</label>
-						<input onChange={this.handleOptionsChange} type="checkbox" id="email"  />
-						<label htmlFor="dob">DOB</label>
-						<input onChange={this.handleOptionsChange} type="checkbox" id="dob" />
+					<div id="additional_info" className="form_structure">
+						<label className="optional_info" htmlFor="additional_info">Optional Infomation</label>
+						<div className="checkboxes">	
+							<label htmlFor="age">Age</label>
+							<input onChange={this.handleOptionsChange} type="checkbox" id="age"  />
+						</div>
+						<div className="checkboxes">
+							<label htmlFor="email">Email</label>
+							<input onChange={this.handleOptionsChange} type="checkbox" id="email"  />
+						</div>
+						<div className="checkboxes">
+							<label htmlFor="dob">DOB</label>
+							<input onChange={this.handleOptionsChange} type="checkbox" id="dob" />
+						</div>
 					</div>
 
-					<button onClick={ this.handleSubmit }>Generate</button>
+					<button className="generator_button" onClick={ this.handleSubmit }>Generate</button>
 
 				</form>
 			</React.Fragment>

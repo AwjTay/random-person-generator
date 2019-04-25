@@ -1,3 +1,15 @@
+See react boilerplate at the bottom of this README for build instructions.
+
+React/Redux Project - Random Person Generator
+
+This one page web app allows a user ot create a list of randomly generated people, as well as providing customisable options for the range of data to be provides for each created 'person'.
+
+As well as practicing integrating an app with a RESTful API, using a variety of request/response formatting methods, I intended to use this project to practice using various animation methods within a React app. The current version of the app features both fully CSS based animations and ReactTransitionGroup enabled animations.
+
+The concept for the app is based on my experience training as a full-stack developer - a process that regularly required the use of dummy-data.
+
+Thanks you to the creators of https://uinames.com/ whose API and database I have used. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
