@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { personFormatter } from "../../data/formatFunctions.js"
 import { CSSTransition } from "react-transition-group"
-import Sound from 'react-sound';
 
 class ResultScreen extends Component{
 	constructor(props){
@@ -26,36 +25,37 @@ class ResultScreen extends Component{
 								return(
 									
 									<li key={i}>
-										<Sound url="../../gulp/media/villagercreation2.mp3" playStatus={Sound.status.PLAYING} type="audio/mpeg"/>
-										{
+																		
 											<table className="table">
 										        
 										        <tbody>
-										        { formattedPerson.map((detail, i) => (
+											        { formattedPerson.map((detail, i) => (
 
-										        	<CSSTransition
-										        		in={true}
-										        		appear={true}
-										        		timeout={600}
-										        		classNames="fade"
-										        	>
+											        	<CSSTransition
+											        		in={true}
+											        		appear={true}
+											        		timeout={600}
+											        		classNames="fade"
+											        	>
 
-											            <tr key={i}>
-											                <th scope="row"></th>
-											                <td>{
-											                	detail ? detail : null
-											                	}
-											                </td>      
-											            </tr>
-										            </CSSTransition>
-										           
-										            ))}  
+												            <tr key={i}>
+												                <th scope="row"></th>
+												                <td>{
+												                	detail ? detail : null
+												                	}
+												                </td>      
+												            </tr>
+											            </CSSTransition>
+											           
+											        ))}  
 										        </tbody>
-										    </table>
-										}
 
-									</li>)}
+										    </table>
+										
+									</li>
+									
 								)
+							})
 							}
 
 						</ul>

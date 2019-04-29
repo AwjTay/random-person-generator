@@ -12,6 +12,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-sound": "^1.2.0",
+    "react-spinner-material": "^1.1.1",
     "react-transition-group": "^4.0.0",
     "reactjs-localstorage": "0.0.7",
     "redux": "^4.0.1",

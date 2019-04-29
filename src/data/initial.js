@@ -5,6 +5,7 @@ const initial = {
 	dobRequested : false,
 	response : [],
 	history: [],
+	loaded : true,
 }
 
 export default initial
