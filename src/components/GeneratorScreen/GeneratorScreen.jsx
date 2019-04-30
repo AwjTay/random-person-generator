@@ -54,35 +54,42 @@ class GeneratorScreen extends Component {
 			<React.Fragment>
 				<form>
 					<h3 className="component_header">Make</h3>
-					<div className="form_structure">
-						<label htmlFor="nationality" >Select Nationality</label>
-						<select className="form_select" id="nationality" onChange={ this.handleNationalityChange }>
-							{ countries.map((item, i) => (
-			            		<option value={ item.name } key={i}>{ item.name }</option>
-				          	))}
-						</select>
-					</div>
-					<div className="form_structure">
-						<label htmlFor="nationality">Select Gender</label>
-						<select className="form_select" id="gender" onChange={ this.handleGenderChange }>	
-							<option value="random">Random</option>				
-			            	<option value="female">Female</option>
-			            	<option value="male">Male</option>
-						</select>
+					<div className="core_options">
+						<div className="form_structure select_style" >
+							<label htmlFor="nationality" >Select Nationality</label>
+							<select className="form_select" id="nationality" onChange={ this.handleNationalityChange }>
+								{ countries.map((item, i) => (
+				            		<option value={ item.name } key={i}>{ item.name }</option>
+					          	))}
+							</select>
+						</div>
+						<div className="form_structure select_style">
+							<label htmlFor="nationality">Select Gender</label>
+							<select className="form_select" id="gender" onChange={ this.handleGenderChange }>	
+								<option value="random">Random</option>				
+				            	<option value="female">Female</option>
+				            	<option value="male">Male</option>
+							</select>
+						</div>
 					</div>
 					<div id="additional_info" className="form_structure">
 						<label className="optional_info" htmlFor="additional_info">Optional Infomation</label>
-						<div className="checkboxes">	
-							<label htmlFor="age">Age</label>
-							<input onChange={this.handleOptionsChange} type="checkbox" id="age"  />
-						</div>
-						<div className="checkboxes">
-							<label htmlFor="email">Email</label>
-							<input onChange={this.handleOptionsChange} type="checkbox" id="email"  />
-						</div>
-						<div className="checkboxes">
-							<label htmlFor="dob">DOB</label>
-							<input onChange={this.handleOptionsChange} type="checkbox" id="dob" />
+						<div className="checkbox_wrapper">
+							<label className="checkboxes">
+								<h5>Age</h5>
+								<input onChange={this.handleOptionsChange} type="checkbox" id="age" className="check_custom" />
+								<span className="check_toggle"></span>
+							</label>
+							<label className="checkboxes"> 
+								<h5>Email</h5>
+								<input onChange={this.handleOptionsChange} type="checkbox" id="email" className="check_custom" />
+								<span className="check_toggle"></span>
+							</label>
+							<label className="checkboxes">
+								<h5>DOB</h5>
+								<input onChange={this.handleOptionsChange} type="checkbox" id="dob" className="check_custom" />
+								<span className="check_toggle"></span>
+							</label>
 						</div>
 					</div>
 

@@ -23,7 +23,7 @@ class ResultScreen extends Component{
 								const formattedPerson = personFormatter(person)
 
 								return(
-									
+
 									<li key={i}>
 																		
 											<table className="table">
@@ -31,22 +31,22 @@ class ResultScreen extends Component{
 										        <tbody>
 											        { formattedPerson.map((detail, i) => (
 
-											        	<CSSTransition
-											        		in={true}
-											        		appear={true}
-											        		timeout={600}
-											        		classNames="fade"
-											        	>
+												        	<CSSTransition
+												        		in={true}
+												        		appear={true}
+												        		timeout={600}
+												        		classNames="fade"
+												        	>
 
-												            <tr key={i}>
-												                <th scope="row"></th>
-												                <td>{
-												                	detail ? detail : null
-												                	}
-												                </td>      
-												            </tr>
-											            </CSSTransition>
-											           
+													            <tr key={i}>
+													                <th scope="row"></th>
+													                <td>{  	
+													                		detail
+													                	}
+													                </td>      
+													            </tr>
+												            </CSSTransition>							           	
+
 											        ))}  
 										        </tbody>
 

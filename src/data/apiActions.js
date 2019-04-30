@@ -16,9 +16,9 @@ export const getPerson = (data) => (dispatch, getState) => {
 			const surname = response.data.surname
 			const gender = response.data.gender
 			const region = response.data.region
-			const age = ageReq ? response.data.age : ""
-			const dob = dobReq ? response.data.birthday.dmy : ""
-			const email = emailReq ? response.data.email : ""
+			const age = ageReq ? response.data.age : "not requested"
+			const dob = dobReq ? response.data.birthday.dmy : "not requested"
+			const email = emailReq ? response.data.email : "not requested"
 
 			const person = [name, surname, gender, region, age, dob, email].reduce((acc, val) => {
 				

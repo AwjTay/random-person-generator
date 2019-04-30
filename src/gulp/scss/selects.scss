@@ -1,0 +1,34 @@
+.select_style {
+    padding: 1%;
+    margin: 0;
+    margin-top: 2%;
+    border: 1px solid grey;
+    width: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.select_style select {
+    padding: 5px 8px;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: none;
+    background: none;
+    transition: all 800ms ease; 
+}
+
+.select_style select:hover {
+	background-color: rgba(169, 169, 169, 0.5);
+	background-blend-mode: darken;
+	
+}
+
+
+#nationality{
+	font-size: 1rem;
+}
+
+#gender{
+	font-size: 1rem;
+}

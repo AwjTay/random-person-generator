@@ -19,8 +19,6 @@ const updateHistory = (state, action) => {
 	}
 }
 
-const setChangeLoad = (state) => ({...state, loaded : !state.loaded});
-
 const updatePerson = (state, action) => ({...state, response : action})
 
 const reducer = (state, action) => {
@@ -28,7 +26,6 @@ const reducer = (state, action) => {
   	case "reset" : return reset()
   	case "setOptions" : return updateOptions(state, action)
   	case "setPerson" : return updateHistory(updatePerson(state, action), action)
-  	case "changeLoad": return setChangeLoad(state); 
 	default:
 	    return state
   }

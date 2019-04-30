@@ -34,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gulp-clean-css": "^4.2.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0"
   }
