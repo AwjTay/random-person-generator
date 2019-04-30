@@ -1,7 +1,7 @@
 import React from 'react';
 import GeneratorScreen from "../GeneratorScreen"
 import ResultScreen from "../ResultScreen"
-import '../../gulp/dist/main.css'
+import '../../gulp/main.scss'
 
 const App = () => {
   
