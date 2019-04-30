@@ -33,4 +33,3 @@ const reducer = (state, action) => {
 
 export default reducer
 
-//issue with how we're recieving action.person

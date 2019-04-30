@@ -2,7 +2,7 @@ import axios from "./axios"
 import {setPerson, changeLoad} from "./stateActions"
 
 export const getPerson = (data) => (dispatch, getState) => {
-	console.log("sending")
+	
 	dispatch(changeLoad)
 	
 	axios.get(`/?ext&region=${data.nationality}&gender=${data.gender}`, 

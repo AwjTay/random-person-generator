@@ -70,5 +70,3 @@ class ResultScreen extends Component{
 }
 
 export default ResultScreen
-
-//<Sound url="../../gulp/media/villagercreation.wav" playStatus={Sound.status.PLAYING}/>

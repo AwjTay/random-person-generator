@@ -7,7 +7,6 @@ export const setPerson = (person) => {
 };
 
 export const changeLoad = () => {
-	console.log("changing load")
 	return {
 		type : "changeLoad",
 	}

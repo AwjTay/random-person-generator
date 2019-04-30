@@ -2,23 +2,30 @@
 
   .components_wrapper{
   	display: flex;
-	flex-direction: row;
-	justify-content: center;
+  	flex-direction: row;
+  	justify-content: center;
   }
 
   form{
-	width: 35%;
-	margin-right: 2%;
+  	
+  	margin-right: 2%;
   }
 
   .result_container{
-	width: 35%;
-	margin-left: 2%;
+  	
+  	margin-left: 2%;
+    
   }
 
   .generator_button{
-	padding-top: 2%;
-	padding-bottom: 2%;
+    margin-top: 10%;
+  	padding-top: 8%;
+  	padding-bottom: 8%;
   }
 
+  .person_list li{
+    padding: 4%;
+  }
+  
 }
+
