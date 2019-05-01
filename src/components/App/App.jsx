@@ -7,7 +7,6 @@ const App = () => {
   
   return (
     <React.Fragment>
-      
         <div className="components_wrapper">
 	      <GeneratorScreen />
 	      <ResultScreen />
@@ -16,4 +15,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
