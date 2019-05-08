@@ -6,11 +6,6 @@ export const setPerson = (person) => {
 	}
 };
 
-export const changeLoad = () => {
-	return {
-		type : "changeLoad",
-	}
-}
 
 export const setOptions = ({ageRequested, dobRequested, emailRequested}) => {
 	return {

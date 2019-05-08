@@ -1,9 +1,8 @@
 import axios from "./axios"
-import {setPerson, changeLoad} from "./stateActions"
+import {setPerson} from "./stateActions"
 
 export const getPerson = (data) => (dispatch, getState) => {
 	
-	dispatch(changeLoad)
 	
 	axios.get(`/?ext&region=${data.nationality}&gender=${data.gender}`, 
 
